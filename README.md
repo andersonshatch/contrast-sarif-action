@@ -1,0 +1,1 @@
+# contrast-sarif-action
