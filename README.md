@@ -6,9 +6,9 @@ This GitHub Action generates a SARIF (Static Analysis Results Interchange Format
 
 Before using this action, ensure you have the following secrets configured in your GitHub repository:
 
-CONTRAST_API_KEY: An agent API key provided by Contrast.
-CONTRAST_AUTH_HEADER: User authorization credentials provided by Contrast.
-CONTRAST_ORG_ID: The ID of your organization in Contrast.
+- CONTRAST_API_KEY: An agent API key provided by Contrast.
+- CONTRAST_AUTH_HEADER: User authorization credentials provided by Contrast.
+- CONTRAST_ORG_ID: The ID of your organization in Contrast.
 
 ## Inputs
 
