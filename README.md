@@ -1,13 +1,16 @@
-Contrast Security SARIF
+# Contrast Security SARIF
+
 This GitHub Action generates a SARIF (Static Analysis Results Interchange Format) file for a specified application using the Contrast Security CLI. The generated SARIF file can then be used for further analysis or uploaded to GitHub Advanced Security (GHAS) for code scanning.
 
-Prerequisites
+## Prerequisites
+
 Before using this action, ensure you have the following secrets configured in your GitHub repository:
 
 CONTRAST_API_KEY: An agent API key provided by Contrast.
 CONTRAST_AUTH_HEADER: User authorization credentials provided by Contrast.
 CONTRAST_ORG_ID: The ID of your organization in Contrast.
-Inputs
+
+## Inputs
 
 | Input         | Description                                                                | Required | Default                           |
 |---------------|----------------------------------------------------------------------------|----------|-----------------------------------|
@@ -20,16 +23,16 @@ Inputs
 | metadata      | Metadata filter to be passed to the Contrast CLI when running the sarif command. | No       | -                                 |
 | ghasEnabled   | Whether to upload the generated SARIF file to GHAS.                        | No       | true                              |
 
+## Functionality
 
-Export to Sheets
-Functionality
 Downloads the Contrast CLI: The action downloads the latest version of the Contrast CLI.
 Configures CLI Arguments: It sets up required and optional arguments for the CLI based on the provided inputs.
 Runs the sarif Command: The Contrast CLI's sarif command is executed to generate the SARIF file.
 Uploads SARIF File:
 The SARIF file is uploaded as an artifact for easy access.
 If ghasEnabled is true, the SARIF file is also uploaded to GHAS for code scanning.
-Example Usage
+
+## Example Usage
 
 ``` yaml 
 name: Contrast SARIF Generation
