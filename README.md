@@ -53,6 +53,5 @@ jobs:
           apiKey: ${{ secrets.CONTRAST_API_KEY }}
           authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
           orgId: ${{ secrets.CONTRAST_ORG_ID }}
-          applicationId: 'your-application-id' # Optional
-          severity: 'MEDIUM' # Optional
+          applicationId: 'your-application-id'
 ```
