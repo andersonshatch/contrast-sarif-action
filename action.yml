@@ -17,10 +17,6 @@ inputs:
     description: 'The name of the host. Includes the protocol section of the URL (https://). Defaults to https://ce.contrastsecurity.com. (optional)'
     required: false
     default: "https://ce.contrastsecurity.com"
-  severity:
-    description: 'Allows user to report libraries with vulnerabilities above a chosen severity level. Values for level are high, medium or low. (Note: Use this input in combination with the fail input, otherwise the action will exit)'
-    required: false
-    default: "CRITICAL"
   metadata:
     description: 'Metadata filter to be passed to the Contrast CLI when running sarif command'
     required: false
