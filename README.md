@@ -26,10 +26,13 @@ Before using this action, ensure you have the following secrets configured in yo
 ## Functionality
 
 Downloads the Contrast CLI: The action downloads the latest version of the Contrast CLI.
+
 Configures CLI Arguments: It sets up required and optional arguments for the CLI based on the provided inputs.
+
 Runs the sarif Command: The Contrast CLI's sarif command is executed to generate the SARIF file.
-Uploads SARIF File:
-The SARIF file is uploaded as an artifact for easy access.
+
+Uploads SARIF File: The SARIF file is uploaded as an artifact for easy access.
+
 If ghasEnabled is true, the SARIF file is also uploaded to GHAS for code scanning.
 
 ## Example Usage
@@ -53,6 +56,5 @@ jobs:
           apiKey: ${{ secrets.CONTRAST_API_KEY }}
           authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
           orgId: ${{ secrets.CONTRAST_ORG_ID }}
-          applicationId: 'your-application-id' # Optional
-          severity: 'MEDIUM' # Optional
+          applicationId: 'your-application-id'
 ```
