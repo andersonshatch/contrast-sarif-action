@@ -75,7 +75,7 @@ runs:
         ./contrast sarif ${{ steps.required-args.outputs.args }} ${{ steps.optional-args.outputs.args }} 
         echo sarif=$(cat contrast.sarif) >> $GITHUB_OUTPUT
     - name: Upload sarif file to summary
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: contrast.sarif
         path: contrast.sarif
